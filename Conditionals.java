@@ -1,7 +1,8 @@
 public class Conditionals {
     public static void main(String[] args) {
 
-        int numero = 5;
+        int numero = 8;
+        int numero2 = 9;
 
         // Confrima si el numero es positivo o negativo.
         if (numero > 0) {
@@ -14,7 +15,7 @@ public class Conditionals {
         if (numero == 0) {
             System.out.println("Es cero");
         } else {
-            System.out.println("La neta no se que es esto... *explota*.");
+            System.out.println("La neta, la neta... no te entiendo nada carnal, escribe bien, dame el numero que te pido.");
         }
 
         // Confrima si el numero es par o inpar.
@@ -25,20 +26,11 @@ public class Conditionals {
         } 
         
         // Confrima si el numero es divisible entre otro numero.
-        if (numero  ) {
-            System.out.println("");
+        if (numero % numero2 == 0) {
+            System.out.println("Si se puede dividir.");
         } else {
-            System.out.println("");
+            System.out.println("Nel, no se puede dividir, calale con otro.");
         } 
         
     }
 }
-
-// public static void main(String[] args) {
-//     int tiempo_andres = 10;
-//     if (tiempo_andres > 10) {
-//         System.out.println("Andrés tiene tiempo de enseñarte un poco el día de hoy... ☜(ﾟヮﾟ☜)");
-//     } else {
-//         System.out.println("Andrés NO tiene tiempo de enseñarte un poco el día de hoy... ¯-_(ツ)_/¯");
-//     }
-// }
