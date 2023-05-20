@@ -1,0 +1,11 @@
+¿Wath is the next stepts? 
+1. Learn and practice with others examples more interactives
+
+Utiliza la estructura de control SWITCH en el lenguaje Java para crear un carrito de mercado, el carrito preguntará las con los siguientes productos:
+
+Pollo a     $24 kilo
+Papa a      $17 kilo
+Queso a     $157 unidad
+Tosino a    $92 kilo
+
+Al finalizar
