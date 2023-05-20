@@ -1,8 +1,8 @@
 public class Conditionals {
     public static void main(String[] args) {
 
-        int numero = 8;
-        int numero2 = 9;
+        int numero = 10;
+        int numero2 = 2;
 
         // Confrima si el numero es positivo o negativo.
         if (numero > 0) {
