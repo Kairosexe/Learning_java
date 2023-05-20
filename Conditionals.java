@@ -25,7 +25,7 @@ public class Conditionals {
         } 
         
         // Confrima si el numero es divisible entre otro numero.
-        if (numero ) {
+        if (numero  ) {
             System.out.println("");
         } else {
             System.out.println("");
