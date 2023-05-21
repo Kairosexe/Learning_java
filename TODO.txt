@@ -1,11 +1,17 @@
 ¿Wath is the next stepts? 
 1. Learn and practice with others examples more interactives
 
-Utiliza la estructura de control SWITCH en el lenguaje Java para crear un carrito de mercado, el carrito preguntará las con los siguientes productos:
+En tu empresa, piden la muestra de un carrito de compra basico en terminal que muestre a los nuevos empleados de la compañía el uso de la estrctura de control, utiliza la plantilla(Store.java) del programa presente para generar el carrito de compra.
+
+Utiliza la estructura de control SWITCH e IF en el lenguaje Java para crear un carrito de mercado, el carrito preguntará las cantidades, con los siguientes productos 
+
+NOTA: Está permitido usar las siguientes clases en esta actividad:
+- BufferedReader
+- Scanner
 
 Pollo a     $24 kilo
-Papa a      $17 kilo
+Papa a      $17 kilos
 Queso a     $157 unidad
 Tosino a    $92 kilo
 
-Al finalizar
+Al finalizar imprime el total de la compra, cuantos kilos se pidió de cada uno y se preguntará si desea continuar o terminar la transacción.
