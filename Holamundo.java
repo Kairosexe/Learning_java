@@ -17,7 +17,7 @@ public class Holamundo {
         System.out.println("La suma es: " + resultado);
 
         // Este es el cating de "double" a "float".
-        resultado  = (float) (a / b);
+        resultado  = (float) (a / b);                                    
         System.out.println("La division es: " + resultado);
         
         // Este es el cating de "double" a "float". 
