@@ -28,10 +28,9 @@ public class Store {
         while (opcion != 0) {
 
             System.out.println("\tBIENVENIDO/A \nNUESTROS PRODUCTOS SON:");
-            System.out.println(
-                    "1. Pollo $24 el Kilo. \n2. Papa $17 el Kilo. \n3. Queso $157 la unidad. \n4. Tosino $92 el Kilo.");
+            System.out.println("1. Pollo $24 el Kilo. \n2. Papa $17 el Kilo. \n3. Queso $157 la unidad. \n4. Tosino $92 el Kilo.");
 
-            System.out.println("Ingresa el numero del producto que llevaras.");
+            System.out.println("Ingresa el numero del producto que deseas llevar.");
             // Forma parte de la calse "Scanner", aqui se asignan valores.
             numProducto = scan.nextInt();
 
@@ -50,9 +49,13 @@ public class Store {
                 case 4:
                     System.out.println("Selecciono Tosino.");
                     break;
+                default:
+                    System.out.println("Lo sentimos no contamos con ese producto.");
+                    // Reinicia el bucle si la opcion seleccionada es menor que uno o mayor a cuatro.
+                    continue;
             }
 
-            System.out.println("Ingresa la cantidad que llevaras.");
+            System.out.println("Ingresa la cantidad que deseas llevar.");
             // Aqui se asigna valor a la variable "cantidad" que representara la cantidad
             // del producto que se selecciono.
             cantidad = scan.nextInt();
@@ -92,8 +95,9 @@ public class Store {
                 System.out.println("¡Gracias, vuelva pronto!");
             }
         }
-        // Cierra la secuencia y libera los recursos que estaban ocupados en la secuencia de scanner.
-        // Basicamente esta clase libera espacio en la memoria. 
+        // Cierra la secuencia y libera los recursos que estaban ocupados en la
+        // secuencia de scanner.
+        // Basicamente esta clase libera espacio en la memoria.
         scan.close();
     }
 }
