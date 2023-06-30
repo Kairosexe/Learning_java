@@ -1,9 +1,3 @@
-Aqui Quiero que ocurra un conficto
-esadsdsa
-sadsaa
-sdasad
-1. Learn and practice with others examples more interactives
-
 En tu empresa, piden la muestra de un carrito de compra basico en terminal que muestre a los nuevos empleados de la compañía el uso de la estrctura de control, utiliza la plantilla(Store.java) del programa presente para generar el carrito de compra.
 
 Utiliza la estructura de control SWITCH e IF en el lenguaje Java para crear un carrito de mercado, el carrito preguntará las cantidades, con los siguientes productos 
