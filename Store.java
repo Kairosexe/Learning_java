@@ -45,25 +45,25 @@ public class Store {
                     System.out.println("CARRITO DE COMPRAS:");
                     // Guarda el costo total del producto seleccionado.
                     total += pollo1Kilo * cantidad;
-                    System.out.println("Precio: $" + pollo1Kilo * cantidad);
+                    System.out.println("Precio: $" + multiplicar(total, cantidad));
                     break;
                 case 2:
                     System.out.println("Selecciono Papa.");
                     cantidad = scan.nextInt();
                     total += papa1Kilo * cantidad;
-                    System.out.println("Precio: $" + papa1Kilo * cantidad);
+                    System.out.println("Precio: $" + multiplicar(total, cantidad));
                     break;
                 case 3:
                     System.out.println("Selecciono Queso.");
                     cantidad = scan.nextInt();
                     total += queso1Unidad * cantidad;
-                    System.out.println("Precio: $" + queso1Unidad * cantidad);
+                    System.out.println("Precio: $" + multiplicar(total, cantidad));
                     break;
                 case 4:
                     System.out.println("Selecciono Tosino.");
                     cantidad = scan.nextInt();
                     total += tosino1Kilo * cantidad;
-                    System.out.println("Precio: $" + tosino1Kilo * cantidad);
+                    System.out.println("Precio: $" + multiplicar(total, cantidad));
                     break;
                 default:
                     System.out.println("Lo sentimos no contamos con ese producto.");
@@ -95,5 +95,9 @@ public class Store {
         // secuencia de scanner.
         // Basicamente esta clase libera espacio en la memoria.
         scan.close();
+    }
+
+    public static int multiplicar (int precio, int cantidad) {
+        return precio * cantidad;
     }
 }
