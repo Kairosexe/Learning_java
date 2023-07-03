@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class Store {
     public static void main(String[] args) {
 
-        int opcion = 1;
+        int opcion = 0;
 
         // Datos de los productos de la tienda.
         int pollo1Kilo = 24, papa1Kilo = 17, queso1Unidad = 157, tosino1Kilo = 92;
@@ -22,13 +22,13 @@ public class Store {
         // valor de "1" el bucle continuara, pero si el valor de esta cambia a "0", el
         // bucle se cerrara.
         // EJEMPLO:
-        // Si "opcion" es diferente a 0 el bucle continua.
-        while (opcion != 0) {
+        // Si "opcion" es diferente a 5 el bucle continua.
+        while (opcion != 5) {
 
             System.out.println("\tBIENVENIDO/A \nNUESTROS PRODUCTOS SON:");
-            System.out.println("1. Pollo $24 el Kilo. \n2. Papa $17 el Kilo. \n3. Queso $157 la unidad. \n4. Tosino $92 el Kilo.");
+            System.out.println("1. Pollo $24 el Kilo. \n2. Papa $17 el Kilo. \n3. Queso $157 la unidad. \n4. Tosino $92 el Kilo. \n----------------------- \n5. Salir");
 
-            System.out.println("Ingresa el numero del producto que deseas llevar.");
+            System.out.println("Ingresa el numero del producto que deseas llevar o <5> para Salir.");
             // Forma parte de la calse "Scanner", aqui se asignan valores.
             numProducto = scan.nextInt();
 
@@ -44,26 +44,34 @@ public class Store {
                     cantidad = scan.nextInt();
                     System.out.println("CARRITO DE COMPRAS:");
                     // Guarda el costo total del producto seleccionado.
-                    total += pollo1Kilo * cantidad;
-                    System.out.println("Precio: $" + multiplicar(total, cantidad));
+                    System.out.println("Cantidad: " + cantidad + "Kg.");
+                    total += multiplicar(pollo1Kilo, cantidad);
+                    System.out.println("Precio: $" + multiplicar(pollo1Kilo, cantidad));
                     break;
                 case 2:
                     System.out.println("Selecciono Papa.");
                     cantidad = scan.nextInt();
-                    total += papa1Kilo * cantidad;
-                    System.out.println("Precio: $" + multiplicar(total, cantidad));
+                    System.out.println("Cantidad: " + cantidad + "Kg.");
+                    total += multiplicar(papa1Kilo, cantidad);
+                    System.out.println("Precio: $" + multiplicar(papa1Kilo, cantidad));
                     break;
                 case 3:
                     System.out.println("Selecciono Queso.");
                     cantidad = scan.nextInt();
-                    total += queso1Unidad * cantidad;
-                    System.out.println("Precio: $" + multiplicar(total, cantidad));
+                    System.out.println("Cantidad: " + cantidad + "Kg.");
+                    total += multiplicar(queso1Unidad, cantidad);
+                    System.out.println("Precio: $" + multiplicar(queso1Unidad, cantidad));
                     break;
                 case 4:
                     System.out.println("Selecciono Tosino.");
                     cantidad = scan.nextInt();
-                    total += tosino1Kilo * cantidad;
-                    System.out.println("Precio: $" + multiplicar(total, cantidad));
+                    System.out.println("Cantidad: " + cantidad + "Kg.");
+                    total += multiplicar(tosino1Kilo, cantidad);
+                    System.out.println("Precio: $" + multiplicar(tosino1Kilo, cantidad));
+                    break;
+                case 5:
+                    System.out.println("El total de su compra es: $" + total + "\n¡Gracias, vuelva pronto!");
+                    System.exit(5);
                     break;
                 default:
                     System.out.println("Lo sentimos no contamos con ese producto.");
@@ -71,24 +79,6 @@ public class Store {
                     // otra iteración. En este caso si la opcion seleccionada es menor que uno o
                     // mayor a cuatro el bucle se detendra y se riniciara.
                     continue;
-            }
-
-            // Si la cantidad del producto es mayor a cero retornara la cantidad que se le
-            // asigno en la terminal.
-            if (cantidad > 0) {
-                System.out.println("Cantidad: " + cantidad + "Kg.");
-            }
-
-            System.out.println("¿Desea salir o continuar?");
-            System.out.println("Preciona cualquier numero para continuar o <0> para salir.");
-            // Aqui se le asignara el valor de acurdo a lo que el cliente desee hacer segun
-            // las indicaciones que se le dio.
-            opcion = scan.nextInt();
-            // Si "opcion" es igual a "0" retornara el precio total de los productos
-            // seleccionados y un "¡Gracias, vuelva pronto!" y el programa
-            // finalizara.
-            if (opcion == 0) {
-                System.out.println("El total de su compra es: $" + total + "\n¡Gracias, vuelva pronto!");
             }
         }
         // Cierra la secuencia y libera los recursos que estaban ocupados en la
