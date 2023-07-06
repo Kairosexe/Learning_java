@@ -136,12 +136,12 @@ public class StoreZero {
                     fuimonos(opcion);
                     break;
             }
-            // Cierra la secuencia y libera los recursos que estaban ocupados en la
-            // secuencia de scanner.
-            // Basicamente esta clase libera espacio en la memoria.
-            scan.close();
-        }
 
+        }
+        // Cierra la secuencia y libera los recursos que estaban ocupados en la
+        // secuencia de scanner.
+        // Basicamente esta clase libera espacio en la memoria.
+        scan.close();
     }
 
     // Multiplica el producto por la cantidad seleccionada.
