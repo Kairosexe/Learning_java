@@ -7,7 +7,8 @@ public class TiendaKairos {
 
     static int numProducto = 0;
     static float total = 0;
-    static int regresar = 0;
+    static boolean regresar;
+    static float cantidad = 0;
 
     public static void main(String[] args) {
         int opcion = 0;
@@ -43,111 +44,113 @@ public class TiendaKairos {
                 case 4:
                     System.out.println("Nos vemos pronto");
                     break;
-
             }
         }
     }
 
     static void compraProductos() {
-        while (regresar != 5) {
+        while (!regresar) {
             switch (numProducto) {
                 case 1:
-                    System.out.println("Ingrse la cantidad que desea restableacer.");
+                    System.out.println("Ingrese la cantidad que desea restableacer.");
                     System.out.println("------------------------");
-                    double cantidadPollo = scan.nextDouble();
-                    productos[0][2] += cantidadPollo;
+                    cantidad = scan.nextFloat(); 
+                    productos[0][2] += cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
                     System.out.println("Cantidad actualizada: Pollo " + productos[0][2]);
                     break;
 
                 case 2:
-                    System.out.println("Ingrse la cantidad que desea restableacer.");
+                    System.out.println("Ingrese la cantidad que desea restableacer.");
                     System.out.println("------------------------");
-                    double cantidadPapa = scan.nextDouble();
-                    productos[1][2] += cantidadPapa;
+                    cantidad = scan.nextFloat();
+                    productos[1][2] += cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
                     System.out.println("Cantidad actualizada: Papa " + productos[1][2]);
                     break;
 
                 case 3:
-                    System.out.println("Ingrse la cantidad que desea restableacer.");
+                    System.out.println("Ingrese la cantidad que desea restableacer.");
                     System.out.println("------------------------");
-                    double cantidadQueso = scan.nextDouble();
-                    productos[2][2] += cantidadQueso;
+                    cantidad = scan.nextFloat();
+                    productos[2][2] += cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
                     System.out.println("Cantidad actualizada: Queso " + productos[2][2]);
                     break;
 
                 case 4:
-                    System.out.println("Ingrse la cantidad que desea restableacer.");
+                    System.out.println("Ingrese la cantidad que desea restableacer.");
                     System.out.println("------------------------");
-                    double cantidadTosino = scan.nextDouble();
-                    productos[3][2] += cantidadTosino;
+                    cantidad = scan.nextFloat();
+                    productos[3][2] += cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
                     System.out.println("Cantidad actualizada: Tosino " + productos[3][2]);
                     break;
                 case 5:
+                    regresar = true;
                     System.out.println("Nos vemos pronto.");
+                    break;
             }
         }
     }
 
     public static void ventaProductos() {
-        while (regresar != 5) {
+        while (!regresar) {
             switch (numProducto) {
                 case 1:
                     System.out.println("Ingrese la cantidad que desea comprar.");
                     System.out.println("------------------------");
-                    double cantidadPollo = scan.nextDouble();
-                    total += productos[0][1] * cantidadPollo;
+                    cantidad = scan.nextFloat();
+                    total += productos[0][1] * cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
                     System.out.println(
-                            "Compro " + cantidadPollo + " de Pollo. \nCosto total del Pollo solicitado: $"
-                                    + productos[0][1] * cantidadPollo);
+                            "Compro " + cantidad + " de Pollo. \nCosto total del Pollo solicitado: $"
+                                    + productos[0][1] * cantidad);
                     break;
 
                 case 2:
                     System.out.println("Ingrese la cantidad que desea comprar.");
                     System.out.println("------------------------");
-                    double cantidadPapa = scan.nextDouble();
-                    total += productos[1][1] * cantidadPapa;
+                    cantidad = scan.nextFloat();
+                    total += productos[1][1] * cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
                     System.out
-                            .println("Compro " + cantidadPapa + " de Papa. \nCosto total del Papa solicitado: $"
-                                    + productos[1][1] * cantidadPapa);
+                            .println("Compro " + cantidad + " de Papa. \nCosto total del Papa solicitado: $"
+                                    + productos[1][1] * cantidad);
                     break;
 
                 case 3:
                     System.out.println("Ingrese la cantidad que desea comprar.");
                     System.out.println("------------------------");
-                    double cantidadQueso = scan.nextDouble();
-                    total += productos[2][1] * cantidadQueso;
+                    cantidad = scan.nextFloat();
+                    total += productos[2][1] * cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
                     System.out.println(
-                            "Compro " + cantidadQueso + " de Queso. \nCosto total del Queso solicitado: $"
-                                    + productos[2][1] * cantidadQueso);
+                            "Compro " + cantidad + " de Queso. \nCosto total del Queso solicitado: $"
+                                    + productos[2][1] * cantidad);
                     break;
 
                 case 4:
                     System.out.println("Ingrese se la cantidad que desea comprar.");
                     System.out.println("------------------------");
-                    double cantidadTosino = scan.nextDouble();
-                    total += productos[3][1] * cantidadTosino;
+                    cantidad = scan.nextFloat();
+                    total += productos[3][1] * cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
                     System.out.println(
-                            "Compro " + cantidadTosino + " de Tosino. \nCosto total del Tosino solicitado: $"
-                                    + productos[3][1] * cantidadTosino);
+                            "Compro " + cantidad + " de Tosino. \nCosto total del Tosino solicitado: $"
+                                    + productos[3][1] * cantidad);
                     break;
 
                 case 5:
+                    regresar = true;
                     System.out.println("El total de su compra es: $" + total + "\nGracias, vuelva pronto.");
                     break;
 
@@ -155,6 +158,7 @@ public class TiendaKairos {
                     System.out.println("Lo sentimos no contamos con ese producto.");
                     break;
             }
+            break;
         }
     }
 
@@ -165,4 +169,6 @@ public class TiendaKairos {
         }
 
     }
+
+
 }
