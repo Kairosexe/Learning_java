@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class TiendaKairos {
     static Scanner scan = new Scanner(System.in);
 
@@ -36,6 +35,7 @@ public class TiendaKairos {
                     System.out.println("------------------------");
                     numProducto = scan.nextInt();
                     System.out.println("------------------------");
+
                     ventaProductos();
                     break;
                 case 3:
@@ -105,6 +105,7 @@ public class TiendaKairos {
                     System.out.println("Ingrese la cantidad que desea comprar.");
                     System.out.println("------------------------");
                     cantidad = scan.nextFloat();
+                    productos [0][2] -= cantidad;
                     total += productos[0][1] * cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
@@ -117,6 +118,7 @@ public class TiendaKairos {
                     System.out.println("Ingrese la cantidad que desea comprar.");
                     System.out.println("------------------------");
                     cantidad = scan.nextFloat();
+                    productos [1][2] -= cantidad;
                     total += productos[1][1] * cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
@@ -129,6 +131,7 @@ public class TiendaKairos {
                     System.out.println("Ingrese la cantidad que desea comprar.");
                     System.out.println("------------------------");
                     cantidad = scan.nextFloat();
+                    productos [2][2] -= cantidad;
                     total += productos[2][1] * cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
@@ -141,6 +144,7 @@ public class TiendaKairos {
                     System.out.println("Ingrese se la cantidad que desea comprar.");
                     System.out.println("------------------------");
                     cantidad = scan.nextFloat();
+                    productos [3][2] -= cantidad;
                     total += productos[3][1] * cantidad;
                     System.out.println("------------------------");
                     System.out.println("Se realizo la compra.");
